@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Удалить запись</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+<div class="del_class">
+    <div class="del_name">
+        <h1>Удалить {{ task.title }}?</h1>
+    </div>
+    <form method="post" class="del_form">
+        {% csrf_token %}
+        <input type="submit" value="Yes"/>
+    </form>
+</div>
+
+
+
+
+</body>
+</html>

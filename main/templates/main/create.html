@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Создать напоминалку
+{% endblock %}
+
+{% block content %}
+    <h1>Создать напоминалку</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.description }}<br>
+        <button type="submit" class="btn-success">Добавить</button>
+        <span>{{error}}</span>
+    </form>
+{% endblock %}
