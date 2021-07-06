@@ -16,3 +16,5 @@ class TaskForm(ModelForm):
                 'placeholder': 'Введите суть'
             })
         }
+
+
